@@ -1,0 +1,8 @@
+version: "3.7"
+services:
+        build:
+                build: docker
+                image: net.ofnir/build-fennel-lang-org
+                restart: "no"
+                volumes:
+                        - "./fennel-lang.org:/src"

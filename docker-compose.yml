@@ -1,0 +1,10 @@
+version: "3.7"
+services:
+        server:
+                image: nginx
+                restart: "no"
+                volumes:
+                        - "./conf/nginx/etc/nginx/conf.d:/etc/nginx/conf.d:ro"
+                        - "./fennel-lang.org:/usr/share/nginx/html:ro"
+                ports:
+                        - "8080:80"
